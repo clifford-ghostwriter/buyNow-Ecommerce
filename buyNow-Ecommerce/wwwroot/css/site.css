@@ -14,9 +14,14 @@ html {
 
 html {
   position: relative;
-  min-height: 100%;
+  height: 100dvh;
+  border: 1px solid red;
 }
 
 body {
   /*margin-bottom: 60px;*/
+  background-color: black;
+  border: 1px solid white;
+  height:100%;
+  
 }
