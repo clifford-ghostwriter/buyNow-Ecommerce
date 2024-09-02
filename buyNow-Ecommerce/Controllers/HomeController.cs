@@ -1,6 +1,9 @@
+using System;
 using System.Diagnostics;
-using buyNow_Ecommerce.Models;
+//using buyNow_Ecommerce;
+using buyNow.BAL.Models;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace buyNow_Ecommerce.Controllers
 {
