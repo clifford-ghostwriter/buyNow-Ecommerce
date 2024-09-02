@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\buyNow.DAL\buyNow.DAL.csproj" />
+    <ProjectReference Include="..\buyNow.UTILITY\buyNow.UTILITY.csproj" />
+  </ItemGroup>
+
+</Project>
