@@ -1,5 +1,10 @@
 ﻿$(function () {
 
+    const NavheaderHeight = $("#NavHeader").height();
+    const containerFluidHeight = $("#containerFluid").height()
+    $("#sidebarHeader").height(NavheaderHeight);
+    $("#sidebarHeaderCenter").height(containerFluidHeight)
+
     $('#openSidebar').on(
         'click',
         function (e) {

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using buyNow.DAL.Entities;
 
-namespace buyNow.DAL.IRepository
+namespace buyNow.DAL.Interface
 {
-    internal class IUnitOfWork
+    public interface IProduct : IRepository<Product>
     {
     }
 }

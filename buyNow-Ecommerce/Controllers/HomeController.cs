@@ -23,7 +23,7 @@ namespace buyNow_Ecommerce.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View("test");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

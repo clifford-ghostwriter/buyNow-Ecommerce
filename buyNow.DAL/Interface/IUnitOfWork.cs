@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace buyNow.DAL.IRepository
+namespace buyNow.DAL.Interface
 {
-    internal class IRepository
+    public interface IUnitOfWork
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace buyNow.DAL.Entities
 {
-    internal class Review
+    public class Review
     {
         [Key]
         public int UserId { get; set; }

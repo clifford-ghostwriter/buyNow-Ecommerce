@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace buyNow.DAL.Entities
 {
-    internal class Product
+    public class Product
     {
         [Key]
         public int Id { get; set; }
