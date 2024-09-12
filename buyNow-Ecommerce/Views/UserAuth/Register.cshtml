@@ -1,0 +1,95 @@
+﻿@model buyNow.BAL.Models.ApplicationViewModel
+
+
+
+
+@{
+	ViewData["Title"] = "Register";
+
+
+	var toastrMessage = TempData["ToastrMessage"] as string;
+	var toastrType = TempData["ToastrType"] as string ?? "info"; // Default to 'info' if no type is provided
+	var viewdta = ViewData["Title"] as string;
+	var name = nameof(Model.Registration.ConfirmPassword);
+
+}
+
+<h1>Create</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Register">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Registration.FirstName" class="control-label"></label>
+				<input asp-for="Registration.FirstName" class="form-control" />
+				<span asp-validation-for="Registration.FirstName" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Registration.LastName" class="control-label"></label>
+				<input asp-for="Registration.LastName" class="form-control" />
+				<span asp-validation-for="Registration.LastName" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Registration.Email" class="control-label"></label>
+				<input asp-for="Registration.Email" class="form-control" />
+				<span asp-validation-for="Registration.Email" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Registration.Password" class="control-label"></label>
+				<input asp-for="Registration.Password" class="form-control" />
+				<span asp-validation-for="Registration.Password" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Registration.ConfirmPassword" class="control-label"></label>
+				<input asp-for="Registration.ConfirmPassword" class="form-control" />
+				<span asp-validation-for="Registration.ConfirmPassword" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+
+
+</div>
+
+
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var message = '@toastrMessage';
+			var type = '@toastrType';
+			var dta = '@viewdta';
+			var name = '@name'
+			console.log(dta, name)
+
+			alert(name)
+
+			if (message) {
+
+				toastr.options = {
+					"closeButton": true,
+					"progressBar": true,
+					"positionClass": "toast-top-center", // Custom class for centering
+					"timeOut": "5000", // 5-second timeout for the notification
+					"showDuration": "300",
+					"hideDuration": "1000",
+					"extendedTimeOut": "1000",
+				};
+				// Display Toastr notification
+				toastr[type](message); // E.g., toastr.success(), toastr.error(), etc.
+			}
+		});
+	</script>
+}
+
+			
+ 

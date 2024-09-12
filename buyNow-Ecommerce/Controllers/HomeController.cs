@@ -18,7 +18,9 @@ namespace buyNow_Ecommerce.Controllers
 
         public IActionResult Index()
         {
-            return View();
+			TempData["ToastrMessage"] = "Form submitted successfully!";
+			TempData["ToastrType"] = "success"; // You can pass an alert type like 'success', 'danger', etc.
+			return View();
         }
 
         public IActionResult Privacy()

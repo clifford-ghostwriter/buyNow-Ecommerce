@@ -1,8 +1,51 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var toastrMessage = TempData["ToastrMessage"] as string;
+    var toastrType = TempData["ToastrType"] as string ?? "info"; // Default to 'info' if no type is provided
+    var viewdta = ViewData["Title"] as string;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a></p>
 </div>
+
+
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var message = '@toastrMessage';
+            var type = '@toastrType';
+            var dta = '@viewdta';
+            console.log(dta)
+
+            if(dta == "home page"){
+                alert(dta)
+            }
+
+            if (message) {
+                toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-top-center", // Custom class for centering
+                    "timeOut": "5000", // 5-second timeout for the notification
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "extendedTimeOut": "1000",
+                };
+
+                // Display Toastr notification
+                toastr[type](message); // E.g., toastr.success(), toastr.error(), etc.
+            }
+        });
+
+         
+
+    </script>
+
+
+}
+

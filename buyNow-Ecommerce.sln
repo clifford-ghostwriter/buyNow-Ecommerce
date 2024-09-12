@@ -5,11 +5,16 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "buyNow-Ecommerce", "buyNow-Ecommerce\buyNow-Ecommerce.csproj", "{44C447BB-B5FB-4444-BEC7-BA4C63E43569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buyNow.DAL", "buyNow.DAL\buyNow.DAL.csproj", "{1CD45713-4FED-4AAE-BF11-3468B28D9E8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "buyNow.DAL", "buyNow.DAL\buyNow.DAL.csproj", "{1CD45713-4FED-4AAE-BF11-3468B28D9E8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buyNow.BAL", "buyNow.BAL\buyNow.BAL.csproj", "{0FE17A25-14AE-479C-B11D-EF4614B7EF3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "buyNow.BAL", "buyNow.BAL\buyNow.BAL.csproj", "{0FE17A25-14AE-479C-B11D-EF4614B7EF3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buyNow.UTILITY", "buyNow.UTILITY\buyNow.UTILITY.csproj", "{7F72EEE0-EF1A-434B-AC37-120F31C79F24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "buyNow.UTILITY", "buyNow.UTILITY\buyNow.UTILITY.csproj", "{7F72EEE0-EF1A-434B-AC37-120F31C79F24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E62A8B4-5925-4404-B182-4B1186A43491}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

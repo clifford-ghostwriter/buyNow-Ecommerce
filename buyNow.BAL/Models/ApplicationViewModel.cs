@@ -8,20 +8,28 @@ using buyNow.DAL.Entities;
 namespace buyNow.BAL.Models
 {
 
-    public class ApplicationViewModel
-    {
+	public class ApplicationViewModel
+	{
 
 
-        public Category? Category { get; set; }
+		public Category? Category { get; set; }
 
-        public Product? Product { get; set; }
+		public Product? Product { get; set; }
 
-        public Review?   Review { get; set; }
+		public Review? Review { get; set; }
 
-        public IEnumerable<Category>? Categories { get; set; }
+		public IEnumerable<Category>? Categories { get; set; }
 
-        public IEnumerable<Product>? Products { get; set; }
-        public IEnumerable<Review>? Reviews { get; set; }
+		public IEnumerable<Product>? Products { get; set; }
+		public IEnumerable<Review>? Reviews { get; set; }
 
-    }
+		public RegistrationModel? Registration { get; set; }
+
+		public LoginModel? Login { get; set; }
+
+		public NotificationsModel? Notifications { get; set; }
+
+
+
+	}
 }
