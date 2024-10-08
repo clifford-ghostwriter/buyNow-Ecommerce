@@ -1,9 +1,18 @@
+using System.Globalization;
 using buyNow.DAL.Entities;
 using buyNow_Ecommerce.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+var cultureInfo = new CultureInfo("en-US");  // Or use a different culture like "fr-FR"
+cultureInfo.NumberFormat.CurrencySymbol = "$";
+
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");

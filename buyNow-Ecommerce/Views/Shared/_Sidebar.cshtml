@@ -11,11 +11,19 @@
 	<hr  class="mx-0 my-0"/>
 
 	<ul class="sidebar_nav mt-0">
-		<li>login</li>
-		<li>shop</li>
-		<li>about us</li>
-		<li>login</li>
-		<li>login</li>
+		<li class="nav-item">
+			<a class="nav-link text-dark" asp-controller="UserAuth" asp-action="Register">Register</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-dark" asp-controller="UserAuth" asp-action="Login">Login</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-dark" asp-controller="Product" asp-action="Index">Products</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-dark" asp-controller="Category" asp-action="Index">Category</a>
+		</li>
+
 	</ul>
 </div>
 

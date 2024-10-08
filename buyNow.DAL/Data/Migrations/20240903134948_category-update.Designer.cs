@@ -13,7 +13,7 @@ namespace buyNow_Ecommerce.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240903134948_category-update")]
-    partial class categoryupdate
+    partial class Categoryupdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -26,7 +26,9 @@ namespace buyNow_Ecommerce.Controllers
         // GET: Category
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Categories.ToListAsync());
+            //return View(await _context.Categories.ToListAsync());
+
+            return View(await _category.GetAll());
         }
 
         // GET: Category/Details/5

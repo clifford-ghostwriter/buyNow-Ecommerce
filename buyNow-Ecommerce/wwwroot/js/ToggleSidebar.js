@@ -17,7 +17,7 @@
             
             console.log("hello", nav)
         } else {
-            $(".navbar-nav").css("display", "block")
+            $(".navbar-nav").css("display", "flex")
 
             $("#openSidebar").css("display", "none");
 

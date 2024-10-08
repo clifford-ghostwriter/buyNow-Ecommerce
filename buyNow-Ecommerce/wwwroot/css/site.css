@@ -1,37 +1,38 @@
 
 :root {
     --transition: all 0.3s linear;
+    --primaryColorOne: #50A
 }
 
 
 
 
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  height: 100dvh;
-  /*border: 1px solid red;*/
+    position: relative;
+    height: 100dvh;
+    /*border: 1px solid red;*/
 }
 
 body {
-  /*margin-bottom: 60px;*/
+    /*margin-bottom: 60px;*/
 }
 
-.icon{
-    color:blue;
+.icon {
+    color: blue;
 }
 
 .sidebar {
@@ -43,7 +44,7 @@ body {
     right: 0;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
-    width: 80% ;
+    width: 60%;
     position: fixed;
     height: 100dvh;
     transition: var(--transition);
@@ -52,7 +53,7 @@ body {
     border-bottom-left-radius: 20px;
     border: 1px solid var(--Info-Border, #d0bdf8);
     background: #fff;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .show-side-bar {
@@ -66,7 +67,7 @@ body {
     /*height: 100px;*/
     /*padding-block: 20px;*/
     padding-inline: 10px;
-    align-items: center;    
+    align-items: center;
     /*border: 1px solid red;*/
     margin-top: -7px;
     /*width:100%*/
@@ -85,27 +86,30 @@ body {
     place-content: center;
     margin-right: -10px
 }
-    
 
-    .sidebar_btn {
-        background: transparent;
-        border: none;
-        width: 24px;
-        height: 24px;
-    }
 
-.navbar {
-    /*border: 1px solid red;*/
+.sidebar_btn {
+    background: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
 }
 
-.sidebar_nav{
+.navbar-nav {
+    /*border: 1px solid red;*/
+    display: none;
+}
+
+.sidebar_nav {
     /*border:1px solid red;*/
 }
 
-.container-fluid{
+.container-fluid {
     /*border: 1px solid red;*/
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    display:none;
+    
 }
 
 .toast-center {
@@ -114,5 +118,74 @@ body {
     transform: translate(-50%, -50%);
     position: fixed;
     z-index: 9999;
-    width: 300px; /* Set a custom width if needed */
+    width: 300px; 
+    
+    /* Set a custom width if needed */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /*border: 1px solid blue;*/
+    /*width: 100%*/
+    padding-block: 1rem;
+}
+
+form {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /*width: 100%;*/
+    padding: 2rem;
+    background-color: var(--primaryColorOne);
+    box-shadow: 0 0 0 0.1rem white;
+    /*width: 80%;*/
+    min-width: 200px;
+    color: white;
+}
+
+.form-btn-container {
+    display: grid;
+    /*justify-content: center;*/
+    align-items: center;
+    /*border: 1px solid red;*/
+}
+
+
+.submit-btn{
+    width:100%;
+    /*border: 1px solid red;*/
+    border-radius: 5px;
+}
+
+
+/*media querry*/
+@media(min-width: 450px ) {
+    .sidebar_btn {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        /*border:1px solid red;*/
+        gap: 2rem;
+        min-width: max-content;
+    }
+
+    form {
+      
+        /*width: 50%;*/
+      
+    }
 }

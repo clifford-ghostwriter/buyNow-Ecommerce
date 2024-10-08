@@ -5,7 +5,7 @@
 namespace buyNow_Ecommerce.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class categoryupdate : Migration
+    public partial class Categoryupdate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
